@@ -1,14 +1,14 @@
-import { UserDelete } from './UserDelete';
-import { CardBg, UserName, UserEmail, UserPhone } from './styles';
+import { UserDelete } from './UserDelete'
+import { CardBg, UserName, UserDetails } from './styles'
 
 export function UserCard(props) {
-    const { data } = props;
+    const { data } = props
   return (
     <CardBg>
         <UserName>{data.name}</UserName>
-        <UserEmail>{data.email}</UserEmail>
-        <UserPhone>{data.phone}</UserPhone>
-        <UserDelete />
+        <UserDetails>{data.email}</UserDetails>
+        <UserDetails>{data.phone}</UserDetails>
+        <UserDelete data={data}/>
     </CardBg>
-  );
+  )
 }

@@ -1,8 +1,11 @@
-import { useSelector, useDispatch } from 'react-redux';
-import { UserCard } from '../../app/components/UserCard';
+import { useSelector } from 'react-redux'
+import { UserCard } from '../../app/components/UserCard'
+import {
+  userList
+} from '../userlist/userlistSlice'
 
-export function Userlist(props) {
-    const { list } = props;
+export function Userlist() {
+  const list = useSelector(userList)
   return (
     <div>
         <h1>LIST</h1>
@@ -10,5 +13,5 @@ export function Userlist(props) {
             <UserCard key={user.id} data={user}/>
         ))}
     </div>
-  );
+  )
 }

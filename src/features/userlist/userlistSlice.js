@@ -7,7 +7,7 @@ export const userlistSlice = createSlice({
   },
   reducers: {
     deleteUser: (state, action) => {
-      state.value += action.payload
+      state.value = state.value.filter(user => user.id !== action.payload)
     },
     addUser: (state, action) => {
         state.value = action.payload

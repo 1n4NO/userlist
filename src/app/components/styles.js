@@ -1,4 +1,4 @@
-import { styled } from 'styled-components';
+import { styled } from 'styled-components'
 
 export const CardBg = styled.div`
     background-color: #f2f2f2;
@@ -6,19 +6,17 @@ export const CardBg = styled.div`
     margin: 20px 0;
     padding: 25px 25px 100px 25px;
     position: relative;
-`;
+`
 
 export const UserName = styled.h1`
     font-size: 1.4rem;
-`;
+    color: #1a092a;
+`
 
-export const UserEmail = styled.h3`
+export const UserDetails = styled.h3`
     font-size: 1.2rem;
-`;
-
-export const UserPhone = styled.h3`
-    font-size: 1.2rem;
-`;
+    font-weight: 400;
+`
 
 export const DeleteCover = styled.div`
     top: 0;
@@ -36,7 +34,7 @@ export const DeleteCover = styled.div`
     justify-content: center;
     user-select: none;
     color: #e74d4d;
-`;
+`
 
 export const DeleteBg = styled.div`
     width: calc(100% - 50px);
@@ -55,12 +53,13 @@ export const DeleteBg = styled.div`
     user-select: none;
     background-color: #e33333;
     color: #f2f2f2;
+    font-size: 1rem;
     &:hover ${DeleteCover} {
         transition: all 0.5s;
         transform: rotatey(-80deg);
       }
-`;
+`
 
 export const ComfirmDelete = styled.p`
     font-weight: bold;
-`;
+`

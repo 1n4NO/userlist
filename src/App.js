@@ -1,16 +1,14 @@
-import { useState, useEffect } from 'react';
-import './App.css';
-import { Userlist } from './features/userlist/Userlist';
-import { getList } from './services/list';
-import { useSelector, useDispatch } from 'react-redux';
+import { useEffect } from 'react'
+import './App.css'
+import { Userlist } from './features/userlist/Userlist'
+import { getList } from './services/list'
+import { useDispatch } from 'react-redux'
 import {
-  addUser,
-  userList
-} from './features/userlist/userlistSlice';
+  addUser
+} from './features/userlist/userlistSlice'
 
 function App() {
-  const list = useSelector(userList);
-  const dispatch = useDispatch();
+  const dispatch = useDispatch()
 
   useEffect(() => {
     let mounted = true;
@@ -20,16 +18,16 @@ function App() {
           dispatch(addUser(items))
         }
       })
-    return () => mounted = false;
-  }, [])
+    return () => mounted = false
+  })
 
   return (
     <div className="App">
       <div className="App-bg">
-        <Userlist list={list}/>
+        <Userlist/>
       </div>
     </div>
   );
 }
 
-export default App;
+export default App
