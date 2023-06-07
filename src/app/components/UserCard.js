@@ -3,7 +3,6 @@ import { CardBg, UserName, UserEmail, UserPhone } from './styles';
 
 export function UserCard(props) {
     const { data } = props;
-    console.log(data)
   return (
     <CardBg>
         <UserName>{data.name}</UserName>

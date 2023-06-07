@@ -9,12 +9,16 @@ export const CardBg = styled.div`
 `;
 
 export const UserName = styled.h1`
+    font-size: 1.4rem;
 `;
 
 export const UserEmail = styled.h3`
+    font-size: 1.2rem;
 `;
 
-export const UserPhone = styled.h3``;
+export const UserPhone = styled.h3`
+    font-size: 1.2rem;
+`;
 
 export const DeleteCover = styled.div`
     top: 0;
@@ -35,7 +39,7 @@ export const DeleteCover = styled.div`
 `;
 
 export const DeleteBg = styled.div`
-    width: 40%;
+    width: calc(100% - 50px);
     position: absolute;
     right: 25px;
     bottom: 25px;

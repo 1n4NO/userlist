@@ -2,16 +2,22 @@ import { useState, useEffect } from 'react';
 import './App.css';
 import { Userlist } from './features/userlist/Userlist';
 import { getList } from './services/list';
+import { useSelector, useDispatch } from 'react-redux';
+import {
+  addUser,
+  userList
+} from './features/userlist/userlistSlice';
 
 function App() {
-  const [list, setList] = useState([]);
+  const list = useSelector(userList);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     let mounted = true;
     getList()
       .then(items => {
         if(mounted) {
-          setList(items)
+          dispatch(addUser(items))
         }
       })
     return () => mounted = false;
