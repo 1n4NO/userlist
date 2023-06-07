@@ -49,7 +49,7 @@ export const DeleteBg = styled.div`
     align-items: center;
     justify-content: center;
     user-select: none;
-    background-color: #e74d4d;
+    background-color: #e33333;
     color: #f2f2f2;
     &:hover ${DeleteCover} {
         transition: all 0.5s;
