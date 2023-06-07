@@ -3,12 +3,14 @@ import './App.css'
 import { Userlist } from './features/userlist/Userlist'
 import { getList } from './services/list'
 import { useDispatch } from 'react-redux'
+import { useNetworkState } from './app/hooks/useNetworkState'
 import {
   addUser
 } from './features/userlist/userlistSlice'
 
 function App() {
   const dispatch = useDispatch()
+  const isOnline = useNetworkState()
 
   useEffect(() => {
     let mounted = true;
@@ -23,9 +25,9 @@ function App() {
 
   return (
     <div className="App">
-      <div className="App-bg">
+      {isOnline  ? <div className="App-bg">
         <Userlist/>
-      </div>
+      </div> : <div className="Error-bar">NETWORK DOWN!</div>}
     </div>
   );
 }

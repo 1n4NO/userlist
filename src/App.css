@@ -18,3 +18,9 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
+.Error-bar{
+  background-color: #fcbf49;
+  color: #d62828;
+  padding: 20px 0;
+}
