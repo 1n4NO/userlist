@@ -1,10 +1,14 @@
-import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { UserCard } from '../../app/components/UserCard';
 
-export function Userlist() {
+export function Userlist(props) {
+    const { list } = props;
   return (
     <div>
-        User List goes here
+        <h1>LIST</h1>
+        {list.map(user => (
+            <UserCard key={user.id} data={user}/>
+        ))}
     </div>
   );
 }
