@@ -6,6 +6,7 @@ import {
 
 export function Userlist() {
   const list = useSelector(userList)
+  if(list.length){
   return (
     <div>
         <h1>LIST</h1>
@@ -13,5 +14,8 @@ export function Userlist() {
             <UserCard key={user.id} data={user}/>
         ))}
     </div>
+  )}
+  return(
+    <div>Loading!</div>
   )
 }
