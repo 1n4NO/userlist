@@ -9,8 +9,8 @@ export const CardBg = styled.div`
 `
 
 export const UserName = styled.h1`
-    font-size: 1.4rem;
     color: #1a092a;
+    font-size: 1.4rem;
 `
 
 export const UserDetails = styled.h3`
@@ -19,44 +19,44 @@ export const UserDetails = styled.h3`
 `
 
 export const DeleteCover = styled.div`
-    top: 0;
-    position: absolute;
+    align-items: center;
     background-color: #f2f2f2;
-    width: 100%;
-    height: 100%;
     border-radius: 7px;
+    box-shadow: 1px 1px 12px rgba(0,0,0,0.1);
+    color: #e74d4d;
     cursor: pointer;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    position: absolute;
+    top: 0;
     transition: all 0.5s;
     transform-origin: 0;
-    box-shadow: 1px 1px 12px rgba(0,0,0,0.1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
     user-select: none;
-    color: #e74d4d;
+    width: 100%;
 `
 
 export const DeleteBg = styled.div`
-    width: calc(100% - 50px);
+    align-items: center;
+    background-color: #e33333;
+    border-radius: 7px;
+    bottom: 25px;
+    box-shadow: 1px 1px 12px rgba(0,0,0,0.1);
+    color: #f2f2f2;
+    display: flex;
+    font-size: 1rem;
+    justify-content: center;
+    perspective: 2000px;
     position: absolute;
     right: 25px;
-    bottom: 25px;
-    border-radius: 7px;
-    box-shadow: 1px 1px 12px rgba(0,0,0,0.1);
     -webkit-transform: preserve-3d;
     -ms-transform: preserve-3d;
     transform: preserve-3d;
-    perspective: 2000px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     user-select: none;
-    background-color: #e33333;
-    color: #f2f2f2;
-    font-size: 1rem;
+    width: calc(100% - 50px);
     &:hover ${DeleteCover} {
-        transition: all 0.5s;
         transform: rotatey(-80deg);
+        transition: all 0.5s;
       }
 `
 
